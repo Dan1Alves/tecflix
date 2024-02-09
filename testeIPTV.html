@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play .m3u8 File in HTML5 video player</title>
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   <!-- Include the hls.js library -->
+   <div class="container">
+    <div class="header">
+  <h1 id="h11">MELHOR SERVIÇO IPTV DO BRASIL</h1>
+<h1 id="h12">JOGO DO DIA</h1>
+</div>
+<!-- Create a video element -->
+<video id="video" controls></video>
+
+<!-- Use hls.js to create a player and load the .m3u8 file -->
+<script>
+  var video = document.getElementById('video');
+  if(Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource('http://108.181.57.157:8080/live/bianca/bianca6478/290567.m3u8?token=QhRRBUUMF1gaAAAGUQcCBFkEVwlTV1dUA1dfVQIDVgEKDwFUD1UNUFwbT0cWQBNTAFhuUVJAX1EOAlNSVBsVQ0pTSztfABdYGghQVVAHVANDGRNMXw8AQQ0CSkYTXlMUAxQIUQ5QA0AUGwYdEVETWABZblxTFAwAUhBcChZbWxobWVc7UgFYA1ZdQV9HBEMaQ1xCSBRYCxZbXkpGAV5DRFhCXEYMRgdRDwpBSUdXDkMPQUNBFFhHIWUQSkYGT0NTV0VQC1hGD0BVChZdRxhDXxJqQ11FFhcGVl8DFkENFQYbGhsJVxxqAVdXDQAGQAhZD0YTAhRTR08VXwkKCkNYRGZGUAAUXhdVDQtaRxg=');
+    hls.attachMedia(video);
+    video.play();
+  }
+  else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = 'http://108.181.57.157:8080/live/bianca/bianca6478/290567.m3u8?token=QhRRBUUMF1gaAAAGUQcCBFkEVwlTV1dUA1dfVQIDVgEKDwFUD1UNUFwbT0cWQBNTAFhuUVJAX1EOAlNSVBsVQ0pTSztfABdYGghQVVAHVANDGRNMXw8AQQ0CSkYTXlMUAxQIUQ5QA0AUGwYdEVETWABZblxTFAwAUhBcChZbWxobWVc7UgFYA1ZdQV9HBEMaQ1xCSBRYCxZbXkpGAV5DRFhCXEYMRgdRDwpBSUdXDkMPQUNBFFhHIWUQSkYGT0NTV0VQC1hGD0BVChZdRxhDXxJqQ11FFhcGVl8DFkENFQYbGhsJVxxqAVdXDQAGQAhZD0YTAhRTR08VXwkKCkNYRGZGUAAUXhdVDQtaRxg=';
+    video.addEventListener('loadedmetadata',function() {
+      video.play();
+    });
+  }
+ 
+</script>
+
+<div class="cont">
+<a class="button item3" href="https://bit.ly/assistiremTela-reta" target="_blank">COMPRAR AGORA</a>
+</div>
+
+</div>
+</body>
+</html>

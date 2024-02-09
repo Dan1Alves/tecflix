@@ -1,0 +1,124 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Protest+Guerrilla&display=swap');
+
+
+
+* 
+    ::before,
+    *::after{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+}
+
+body {
+    background-image: url(./img/1300\ canais\ \(2\).png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+body #video {
+    width: 600px;
+    height: 100%;
+    border-radius: 10px;
+    box-shadow:
+        0px 0px 10.4px rgba(0, 0, 0, 0.045),
+        0px 0px 25.1px rgba(0, 0, 0, 0.065),
+        0px 0px 47.2px rgba(0, 0, 0, 0.08),
+        0px 0px 84.2px rgba(0, 0, 0, 0.095),
+        0px 0px 157.5px rgba(0, 0, 0, 0.115),
+        0px 0px 377px rgba(0, 0, 0, 0.16);
+}
+
+#h12{
+text-align: center;
+margin-bottom: 2%;
+color: aliceblue;
+margin-left: -4px;
+}
+
+
+#h11{
+    text-align: center;
+    color: aliceblue;
+margin-left: -4px;
+position: relative;
+bottom:80px;
+}
+
+
+.cont1{
+    width: 700px;
+    height: auto;
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  
+    margin: 5%;
+  
+    
+}
+
+
+.button{
+    display: flex;
+    justify-content: center;
+  
+    position: relative;
+  
+    padding: 12px 0;
+    width: 37%;
+    left: 195px;
+    font-size: 21px;
+    line-height: 28px;
+    font-weight: bold;
+  
+    color: #F6F6F6;
+    border: 1px solid blueviolet;
+    text-decoration: none;
+    
+    overflow: hidden;
+    cursor: pointer;
+
+    border-radius: 20px;
+  }
+
+  .button::before{
+    content: "";
+    width: 100%;
+    height: 100%;
+  
+    position: absolute;
+  
+    background: rgb(65, 59, 70);
+ 
+    transition: all .9s;
+    z-index: -1;
+  }
+
+  .item3::before{
+    width: 100%;
+    height: 0%;
+  
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+
+  }
+  
+  .item3:hover::before{
+    height: 375%;
+
+  }
+
+  .item3:hoveR{
+    color: blueviolet;
+    transition: all .9s;
+  }
+
+
