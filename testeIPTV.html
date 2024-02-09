@@ -17,24 +17,24 @@
 <h1 id="h12">JOGO DO DIA</h1>
 </div>
 <!-- Create a video element -->
-<video id="video" controls></video>
+<link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
 
-<!-- Use hls.js to create a player and load the .m3u8 file -->
+
+<!-- HTML -->
+<video id='hls-example'  class="video-js vjs-default-skin" width="600" height="300" controls>
+<source type="application/x-mpegURL" src="http://108.181.57.157:8080/live/bianca/bianca6478/290567.m3u8?token=QhRRBUUMF1gaAAAGUQcCBFkEVwlTV1dUA1dfVQIDVgEKDwFUD1UNUFwbT0cWQBNTAFhuUVJAX1EOAlNSVBsVQ0pTSztfABdYGghQVVAHVANDGRNMXw8AQQ0CSkYTXlMUAxQIUQ5QA0AUGwYdEVETWABZblxTFAwAUhBcChZbWxobWVc7UgFYA1ZdQV9HBEMaQ1xCSBRYCxZbXkpGAV5DRFhCXEYMRgdRDwpBSUdXDkMPQUNBFFhHIWUQSkYGT0NTV0VQC1hGD0BVChZdRxhDXxJqQ11FFhcGVl8DFkENFQYbGhsJVxxqAVdXDQAGQAhZD0YTAhRTR08VXwkKCkNYRGZGUAAUXhdVDQtaRxg=">
+</video>
+
+
+<!-- JS code -->
+<!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
+<script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
+<script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
+
 <script>
-  var video = document.getElementById('video');
-  if(Hls.isSupported()) {
-    var hls = new Hls();
-    hls.loadSource('http://108.181.57.157:8080/live/bianca/bianca6478/290567.m3u8?token=QhRRBUUMF1gaAAAGUQcCBFkEVwlTV1dUA1dfVQIDVgEKDwFUD1UNUFwbT0cWQBNTAFhuUVJAX1EOAlNSVBsVQ0pTSztfABdYGghQVVAHVANDGRNMXw8AQQ0CSkYTXlMUAxQIUQ5QA0AUGwYdEVETWABZblxTFAwAUhBcChZbWxobWVc7UgFYA1ZdQV9HBEMaQ1xCSBRYCxZbXkpGAV5DRFhCXEYMRgdRDwpBSUdXDkMPQUNBFFhHIWUQSkYGT0NTV0VQC1hGD0BVChZdRxhDXxJqQ11FFhcGVl8DFkENFQYbGhsJVxxqAVdXDQAGQAhZD0YTAhRTR08VXwkKCkNYRGZGUAAUXhdVDQtaRxg=');
-    hls.attachMedia(video);
-    video.play();
-  }
-  else if (video.canPlayType('application/vnd.apple.mpegurl')) {
-    video.src = 'http://108.181.57.157:8080/live/bianca/bianca6478/290567.m3u8?token=QhRRBUUMF1gaAAAGUQcCBFkEVwlTV1dUA1dfVQIDVgEKDwFUD1UNUFwbT0cWQBNTAFhuUVJAX1EOAlNSVBsVQ0pTSztfABdYGghQVVAHVANDGRNMXw8AQQ0CSkYTXlMUAxQIUQ5QA0AUGwYdEVETWABZblxTFAwAUhBcChZbWxobWVc7UgFYA1ZdQV9HBEMaQ1xCSBRYCxZbXkpGAV5DRFhCXEYMRgdRDwpBSUdXDkMPQUNBFFhHIWUQSkYGT0NTV0VQC1hGD0BVChZdRxhDXxJqQ11FFhcGVl8DFkENFQYbGhsJVxxqAVdXDQAGQAhZD0YTAhRTR08VXwkKCkNYRGZGUAAUXhdVDQtaRxg=';
-    video.addEventListener('loadedmetadata',function() {
-      video.play();
-    });
-  }
- 
+var player = videojs('hls-example');
+player.play();
 </script>
 
 <div class="cont">
